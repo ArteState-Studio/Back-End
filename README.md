@@ -26,6 +26,7 @@ O backend **não consome diretamente** a API do Chicago Institute. O app mobile 
 
 ## 📁 Estrutura do Projeto
 
+```
 BACK-END/
 ├── src/
 │   ├── main/
@@ -38,11 +39,11 @@ BACK-END/
 │   │   └── resources/
 │   │       └── application.properties  # Configuração do banco de dados
 ├── pom.xml                             # Dependências Maven
-
+```
 ---
 
 ## 📦 Endpoints da API
-
+````
 | Método | Rota                        | Descrição                                |
 |--------|-----------------------------|------------------------------------------|
 | GET    | `/galeria`                  | Lista todas as obras salvas              |
@@ -50,13 +51,13 @@ BACK-END/
 | PUT    | `/galeria/{id}/descricao`   | Edita a descrição da obra                |
 | DELETE | `/galeria/{id}`             | Exclui uma obra salva                    |
 | GET    | `/galeria/busca?titulo=x`   | Busca obras salvas por parte do título   |
-
+````
 ---
 
 ## 🧪 Testando com Postman
 
 ### ✔️ Salvar nova obra (POST)
-
+````
 POST /galeria
 Content-Type: application/json
 
@@ -65,7 +66,7 @@ Content-Type: application/json
   "imagem": "https://link-da-imagem.com/obra.jpg",
   "descricao": "Obra expressionista de Munch"
 }
-
+````
 ---
 
 ### 📃 Buscar por título
@@ -101,21 +102,23 @@ Você poderá visualizar e testar todos os endpoints por ali, de forma fácil e 
 ## 🛠️ Como rodar o projeto localmente
 
 1. Clone o repositório:
-
+````
 git clone https://github.com/ArteState-Studio/Back-End.git
 cd Back-End
+````
 
 2. Configure seu banco de dados MySQL no application.properties
-
+````
 spring.datasource.url=jdbc:mysql://localhost:3306/artstate
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
+````
 
 3. Rode o projeto com sua IDE favorita (Eclipse, IntelliJ...) ou pelo terminal com:
-
+````
 ./mvnw spring-boot:run
-
+````
 ---
 
 ## 📝 Licença
