@@ -8,13 +8,12 @@ A API foi criada com foco em simplicidade e integração com o aplicativo mobile
 
 ## 🚀 Tecnologias utilizadas
 
-- Java 17+
+- Java 21
 - Spring Boot
 - Spring Web
 - Spring Data JPA
 - MySQL
 - Swagger (para documentação)
-- Lombok (opcional)
 
 ---
 
